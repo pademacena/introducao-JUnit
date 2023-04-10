@@ -64,7 +64,7 @@ public class CalculadoraTest {
 	@Test
 	public void testDivisaoPorZeroComAssertThrows() {
 		assertThrows(ArithmeticException.class,
-				() -> calc.divisao(12, 0));
+    () -> calc.divisao(12, 0));
 	}
 
 	@DisplayName("Somatorio de um numero")

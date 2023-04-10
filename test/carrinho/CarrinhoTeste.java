@@ -25,7 +25,7 @@ public class CarrinhoTeste {
 	@BeforeEach
 	public void inicializa() {
 		cart = new Carrinho();
-        cafe = new Produto("cafe", 6.50);
+    cafe = new Produto("cafe", 6.50);
 		cerveja = new Produto("cerveja", 8.00);
 		vodka = new Produto("vodka", 5.50);
 		cachaca = new Produto("cachaca", 4.50);
@@ -60,9 +60,8 @@ public class CarrinhoTeste {
       cart.removeItem(cafe);
       cart.removeItem(cerveja);
       Assertions.assertEquals(1, cart.getQtdeItems());
-    } catch (ProdutoNaoEncontradoException prod)
-    {
-    fail(prod);
+    } catch (ProdutoNaoEncontradoException prod) {
+      fail(prod);
     }
   }
 
@@ -79,7 +78,6 @@ public class CarrinhoTeste {
 		cart.addItem(cafe);
 		cart.addItem(vodka);
 		Assertions.assertEquals(2, cart.getQtdeItems());
-	
   }
 
 	@DisplayName("Remover todos itens do carrinho")
@@ -91,7 +89,6 @@ public class CarrinhoTeste {
 		cart.addItem(cerveja);
 		cart.esvazia();
 		Assertions.assertEquals(0, cart.getQtdeItems());
-
   }
     
 }
